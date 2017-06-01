@@ -24,7 +24,7 @@ public class VehicleController {
 		return "response";
 	}
 	
-	//@CrossOrigin(origins = "http://mocker.egen.io", maxAge = 3600)
+	@CrossOrigin(origins = "http://mocker.egen.io", maxAge = 3600)
 	@RequestMapping(value = "/vehicles", method = RequestMethod.PUT, 
 			produces = MediaType.APPLICATION_JSON_UTF8_VALUE,
 			consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)

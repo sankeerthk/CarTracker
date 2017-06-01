@@ -19,7 +19,7 @@ public class ReadingController {
 	@Autowired
 	ReadingService readingService;
 
-	//@CrossOrigin(origins = "http://mocker.egen.io", maxAge = 3600)
+	@CrossOrigin(origins = "http://mocker.egen.io", maxAge = 3600)
 	@RequestMapping(value = "/readings", method = RequestMethod.POST, 
 			consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, 
 			produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
