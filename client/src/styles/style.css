@@ -1,0 +1,20 @@
+table {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    font-size: 16px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+
+}
+thead {
+    padding: 10px;
+    margin: 10px;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+tr th{
+    display: table-cell;
+    background-color: #4CAF50;
+}
+footer {
+    max-width: 960px;
+}
