@@ -31,11 +31,10 @@ public class VehicleController {
 	public List<Vehicle> saveVehicles(@RequestBody List<Vehicle> cars) {
 		return vehicleService.saveVehicles(cars);
 	}
-
+	@CrossOrigin(origins = "http://localhost:3000", maxAge = 3600)
 	@RequestMapping(value = "/vehicles", method= RequestMethod.GET,
 			produces=MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public List<Vehicle> findAllVehicles() {
 		return vehicleService.findAllVehicles();
-	}
-	
+	}	
 }

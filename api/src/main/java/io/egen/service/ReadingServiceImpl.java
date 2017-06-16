@@ -39,4 +39,9 @@ public class ReadingServiceImpl implements ReadingService {
 	public List<VehicleReading> getAllReadings() {
 		return (List<VehicleReading>) readingDao.findAll();
 	}
+
+	@Override
+	public List<VehicleReading> getReadingsByVehicle(String vin) {
+		return readingDao.findByVin(vehicleService.findByVin(vin));
+	}
 }

@@ -20,8 +20,7 @@ import org.hibernate.annotations.CreationTimestamp;
 @Table(name="ALERT")
 public class Alert implements Serializable {
 	
-	private static final long serialVersionUID = 1L;
-	
+	private static final long serialVersionUID = 1L;	
 	private long alertId;
 	private Vehicle vin;
 	private Timestamp timestamp;

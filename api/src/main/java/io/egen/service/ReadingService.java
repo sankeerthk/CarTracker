@@ -12,4 +12,6 @@ public interface ReadingService {
 
 	List<VehicleReading> getAllReadings();
 
+	List<VehicleReading> getReadingsByVehicle(String vin);
+
 }
