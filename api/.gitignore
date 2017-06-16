@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Add any directories, files, or patterns you don't want to be tracked by version control
 #ignored resources
 .settings
@@ -7,9 +6,3 @@
 .metadata
 RemoteSystemsTempFiles
 target
-=======
-.settings
-target
-.classpath
-.project
->>>>>>> 08403ce05776bbc5daa4f73f411b920026bff9e8
