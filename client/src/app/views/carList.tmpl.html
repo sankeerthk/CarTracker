@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <h1>Cars List</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <input type="search" ng-model="carVm.searchText.make" placeholder="Search by Make here..."
+                       class="form-control">
+            </div>
+        </div>
+        <hr>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered stripe" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th ng-click="carVm.changeSort('vin')">Vin</th>
+                    <th ng-click="carVm.changeSort('make')">Make</th>
+                    <th ng-click="carVm.changeSort('model')">Model</th>
+                    <th ng-click="carVm.changeSort('year')">Year</th>
+                    <th ng-click="carVm.changeSort('lastServiceDate')">Last Service Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="car in carVm.cars | filter:carVm.searchText as search | orderBy:carVm.sorter.by:carVm.sorter.reverse">
+                    <td><a ng-href="#!/alerts/{{car.vin}}">{{car.vin}}</a></td>
+                    <td>{{car.make}}</td>
+                    <td>{{car.model}}</td>
+                    <td>{{car.year}}</td>
+                    <td>{{car.lastServiceDate | date:'medium'}}</td>
+                </tr>
+                <tr ng-if="search.result == 0">
+                   <strong>No Results Found</strong>
+                </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>
